@@ -1,0 +1,203 @@
+* Slide Options                           :noexport:
+# ======= Appear in cover-slide ====================
+#+TITLE: SQL - Joins in depth
+#+SUBTITLE:  JOINS, JOINS, JOINS
+#+COMPANY: Codeable
+#+AUTHOR: Albert Castellano Moreno
+
+# ======= Appear in thank-you-slide ================
+#+GITHUB: http://github.com/acastemoreno
+
+# ======= Appear under each slide ==================
+#+FAVICON: images/join-logo.png
+#+ICON: images/join-logo.png
+#+HASHTAG: #SQL_Joins #Codeable
+
+# ======= Google Analytics =========================
+#+ANALYTICS: ----
+
+# ======= Org settings =========================
+#+EXCLUDE_TAGS: noexport
+#+OPTIONS: toc:nil num:nil ^:nil
+
+* Buscando información
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+
+* 
+  :PROPERTIES:
+  :FILL:     images/sqljoin.jpeg
+  :TITLE:    white
+  :SLIDE:    white cover-image
+  :END:
+
+* 
+  :PROPERTIES:
+  :FILL:     images/elmo.gif
+  :TITLE:    white
+  :SLIDE:    white contain-image
+  :END:
+
+* Bring some light
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+
+* Tablas
+  :PROPERTIES:
+  :ARTICLE:  smaller
+  :END:
+*especies* 
+|-----+-------------------|
+|  id | name              |
+|-----+-------------------|
+| * 1 | Aves              |
+|   2 | Especie Teorica 1 |
+|   3 | Especie Teorica 2 |
+|-----+-------------------|
+
+*animales*
+| id | especie_id | name      |
+|----+------------+-----------|
+|  1 | * 1        | Picaflor  |
+|  2 | * 1        | Paloma    |
+|  3 |            | Phoenix   |
+|  4 |            | Basilisco |
+
+* 
+  :PROPERTIES:
+  :FILL:     images/merge.gif
+  :TITLE:    white
+  :SLIDE:    white contain-image
+  :END:
+
+* SQL JOIN
+  :PROPERTIES:
+  :ARTICLE:  larger
+  :END:
+
+#+BEGIN_SRC SQL
+SELECT *
+<b>FROM "especies"</b> AS "es"
+<b><option> "animales"</b> AS "an"
+ON <b>"es".id = "an".especie_id</b>
+;
+# <b><option> JOIN|LEFT JOIN|RIGHT JOIN|FULL JOIN</b>
+#+END_SRC
+
+* 
+  :PROPERTIES:
+  :FILL:     images/diagrama.png
+  :TITLE:    white
+  :SLIDE:    white cover-image
+  :END:
+
+* Rows que cumple condicion
+#+BEGIN_CENTER
+#+ATTR_HTML: :height 400px
+[[file:images/Inner.png]]
+#+END_CENTER
+
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+solo para nota[fn:1]
+#+END_QUOTE
+
+* 
+  :PROPERTIES:
+  :FILL:     images/sql-joins.png
+  :TITLE:    white
+  :SLIDE:    white cover-image
+  :END:
+
+* Inner Join
+  :PROPERTIES:
+  :ARTICLE:  smaller
+  :END:
+#+BEGIN_SRC SQL
+SELECT *
+FROM "especies" AS "es"
+<b>JOIN</b> "animales" AS "an" ON "an".especie_id = "es".id;
+#+END_SRC
+
+#+BEGIN_CENTER
+#+ATTR_HTML: :height 300px
+[[file:images/inner_example.png]]
+#+END_CENTER
+
+* Left Join
+  :PROPERTIES:
+  :ARTICLE:  smaller
+  :END:
+#+BEGIN_SRC SQL
+SELECT *
+FROM "especies" AS "es"
+<b>LEFT JOIN</b> "animales" AS "an" ON "an".especie_id = "es".id;
+#+END_SRC
+
+#+BEGIN_CENTER
+#+ATTR_HTML: :height 300px
+[[file:images/left_join_example.png]]
+#+END_CENTER
+
+* Right Join
+  :PROPERTIES:
+  :ARTICLE:  smaller
+  :END:
+#+BEGIN_SRC SQL
+SELECT *
+FROM "especies" AS "es"
+<b>RIGHT JOIN</b> "animales" AS "an" ON "an".especie_id = "es".id;
+#+END_SRC
+
+#+BEGIN_CENTER
+#+ATTR_HTML: :height 300px
+[[file:images/right_join_example.png]]
+#+END_CENTER
+
+
+* Full Join
+  :PROPERTIES:
+  :ARTICLE:  smaller
+  :END:
+#+BEGIN_SRC SQL
+SELECT *
+FROM "especies" AS "es"
+<b>FULL JOIN</b> "animales" AS "an" ON "an".especie_id = "es".id;
+#+END_SRC
+
+#+BEGIN_CENTER
+#+ATTR_HTML: :height 300px
+[[file:images/full_join_example.png]]
+#+END_CENTER
+
+* BONUS (CROSS JOIN)
+  :PROPERTIES:
+  :ARTICLE:  smaller
+  :END:
+#+BEGIN_SRC SQL
+SELECT *
+FROM "especies" AS "es"
+<b>CROSS JOIN</b> "animales" AS "an"
+#+END_SRC
+
+#+BEGIN_CENTER
+#+ATTR_HTML: :height 300px
+[[file:images/cross_join_example.png]]
+#+END_CENTER
+
+* Gracias ʕ•ᴥ•ʔ
+:PROPERTIES:
+:SLIDE: thank-you-slide segue
+:ASIDE: right
+:ARTICLE: flexbox vleft auto-fadein
+:END:
+
+* Footnotes
+[fn:1] [[https://www.datacamp.com/community/tutorials/introduction-to-sql-joins][Introduction to SQL Joins]]
+

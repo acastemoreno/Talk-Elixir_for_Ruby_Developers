@@ -1,0 +1,691 @@
+#+TITLE: Elixir Language
+#+SUBTITLE: Lenguaje |> Divertido |> Productivo |> Mantenible |> Confiable
+#+DATE: 2019/06/11（日）19:00
+#+AUTHOR: Albert Castellano Moreno
+#+EMAIL: acastemoreno@gmail.com
+#+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+OPTIONS: author:t c:nil creator:comment d:(not "LOGBOOK") date:t
+#+OPTIONS: e:t email:nil f:t inline:t num:nil p:nil pri:nil stat:t
+#+OPTIONS: tags:t tasks:t tex:t timestamp:t toc:nil todo:t |:t
+#+CREATOR: Emacs 24.4.1 (Org mode 8.2.10)
+#+DESCRIPTION:
+#+EXCLUDE_TAGS: noexport
+#+KEYWORDS:
+#+LANGUAGE: es
+#+SELECT_TAGS: export
+
+
+#+TWITTER: acastemoreno
+
+#+FAVICON: images/elixir.png
+#+ICON: images/elixir.png
+#+HASHTAG: #myelixirstatus
+
+* Nuevo lenguaje? Para qué?
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+    Estoy comodo con el lenguaje que conozco
+
+* Problema
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 340px
+[[file:images/cpu0.jpg]]
+#+END_CENTER
+
+** [[https://www.youtube.com/watch?v=8pTEmbeENF4][Descripción detallada del problema]] (2013)
+  :PROPERTIES:
+  :FILL:     images/future-of-programming.png
+  :TITLE:    white
+  :SLIDE:    white
+  :END:
+
+** Resumen del video: 4 ideas en experimentación
+  :PROPERTIES:
+  :FILL:     images/topicos.png
+  :TITLE:    white
+  :SLIDE:    white
+  :END:
+
+** Secuencial -> Concurrente
+- Serie de instrucciones (Computadora, haz esto, luego esto, luego esto, .........)
+- Esto debido al Hardware (Maquina de Von Neumann)
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 450px
+[[file:images/neumann.png]]
+#+END_CENTER
+
+** Pero ahora existian: Array de Procesadores
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 550px
+[[file:images/array-procesadores.png]]
+#+END_CENTER
+
+** Primera solución
+  :PROPERTIES:
+  :ARTICLE: smaller
+  :END:
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 700px
+[[file:images/threads-memory.png]]
+#+END_CENTER
+** Pero es un lio
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 700px
+[[file:images/multithreaded_programming.jpg]]
+#+END_CENTER
+
+** [[https://youtu.be/xoNRtWl4fZU][Processing 2.7 million images with Elixir (vs Ruby) by David Padilla ]]
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 700px
+[[file:images/ruby_results.png]]
+#+END_CENTER
+
+
+** Mejor solución: Modelo Actor
+:PROPERTIES:
+:ARTICLE: smaller
+:END:
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 420px
+Actor Model (1973)
+
+[[file:images/modelo-actor.png]]
+#+END_CENTER
+
+** Programación Funcional, ideal para Modelo Actor
+- La programación funcional es un paradigma de programación.
+- Las funciones son los componentes basicos (no existen objetos).
+- El codigo es declarativo.
+- La memoria no es compartida.
+- Inmutabilidad (no side efects).
+
+** y funciona, Erlang by Ericsson (1986)
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 280px
+[[file:images/erlang_the_movie.jpg]]
+#+END_CENTER
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+Nota1[fn:1]
+#+END_QUOTE
+
+** Controlar conmutaciones telefonicas: Fault Tolerance
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 800px
+[[file:images/telefonista.jpg]]
+#+END_CENTER
+
+** [[https://www.youtube.com/watch?v=c12cYAUTXXs&t=7s][WhatsApp: 55 Ingenieros - $19 Millones]]
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 750px
+[[file:images/whatsapp.png]]
+#+END_CENTER
+
+** La Programación Funcional es dificil de aprender.
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 500
+[[file:images/haskell.png]]
+#+END_CENTER
+
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+ Nota2[fn:2].
+#+END_QUOTE
+
+** Pero es necesario
+  :PROPERTIES:
+  :FILL:     images/time.png
+  :TITLE:    white
+  :SLIDE:    white
+  :END:
+
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+ Nota3[fn:3].
+#+END_QUOTE
+
+* ¿Porqué Elixir Language?
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+    ¿Qué tiene de especial?
+
+* Creación
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+
+** José Valim (Parte del Core Team de =Ruby On Rails=)
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 400px
+[[file:images/jose_valim.jpg]]
+#+END_CENTER
+#+BEGIN_QUOTE
+一I loved everything I saw in Erlang, but I hated the things I didn't see.
+#+END_QUOTE
+
+** Proceso de Creación
+
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 700px
+[[file:images/pineapple_pen.gif]]
+#+END_CENTER
+
+** Lo mejor de 3 lenguajes de programación
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 400px
+[[file:images/logos.jpg]]
+#+END_CENTER
+
+** Ruby -> Elixir =filosofia: productividad y diversión=
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 550px
+[[file:images/Bob_Ross.jpg]]
+#+END_CENTER
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+Nota4[fn:4]
+#+END_QUOTE
+
+** Erlang -> Elixir =ecosistema, performance, fault tolerance, hot upgrade=
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 700px
+[[file:images/erlang_elixir.png]]
+#+END_CENTER
+
+** Clojure -> Elixir =Metaprogramación, DSL(Domain Specific Language), Polymorphism=
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 310px
+[[file:images/metaprogramming.png]]
+#+END_CENTER
+
+** En armonia
+  :PROPERTIES:
+  :ARTICLE: larger
+  :END:
+#+BEGIN_QUOTE
+Elixir is what would happen if Erlang, Clojure, and Ruby somehow had a baby and it wasn’t an accident.
+
+  --Devin Torres
+#+END_QUOTE
+
+#+BEGIN_QUOTE
+Elixir offers developers the functional power and concurrent resilience of Erlang, with friendlier syntax, libraries and metaprogramming.
+
+  --Simon St. Laurent
+#+END_QUOTE
+
+* Features
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+
+** Pattern Matching
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 300px
+[[file:images/babe_pattern.gif]]
+#+END_CENTER
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+Nota5[fn:5]
+Nota6[fn:6]
+#+END_QUOTE
+
+** Pattern Matching ===
+#+BEGIN_SRC elixir
+iex> {nombre, edad} = {"Albert", 27}
+iex> nombre
+"Albert"
+iex> edad
+27
+iex> {:ok, mensaje} = {:ok, "Holi Woli"}
+{:ok, "Holi Woli"}
+iex> mensaje
+"Holi Woli"
+iex> [a,b,c,d,a] = [1,2,3,4,5]
+!Error
+#+END_SRC
+
+** Pipe Operator =|>=
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 500px
+[[file:images/production_line.png]]
+#+END_CENTER
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+Nota7[fn:7]
+Nota8[fn:8]
+#+END_QUOTE
+
+** Pipe Operator =|>=
+Diseñado inicialmente para resolver este problema:
+#+BEGIN_SRC elixir
+lista = 1..500000
+temp = Enum.map(lista, &(&1*2-20))
+respuesta = Enum.filter(temp, &(rem(&1, 3) == 0 || rem(&1, 5) == 0))
+respuesta = Enum.take(temp, 5)
+
+Enum.take(Enum.filter(Enum.map(1..500000, &(&1*2-20)),
+&(rem(&1, 3) == 0 || rem(&1, 5) == 0)), 5)
+#+END_SRC
+
+** Pipe Operator =|>=
+Podemos usar algo más elegante y eficiente
+#+BEGIN_SRC elixir
+1..500000
+  |> Enum.map(&(&1*2-20))
+  |> Enum.filter(&(rem(&1, 3) == 0 || rem(&1, 5) == 0))
+  |> Enum.take(5)
+#+END_SRC
+#+ATTR_HTML: :class note
+
+** Pipe Operator =|>=
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 295px
+[[file:images/chain_function.png]]
+#+END_CENTER
+
+** Pipe Operator =|>= Lazy Operator
+Opera solo cuando se debe
+#+BEGIN_SRC elixir
+iex> procedimientos = 1..500000
+  |> Stream.map(&(&1*2-20))
+  |> Stream.filter(&(rem(&1, 3) == 0 || rem(&1, 5) == 0))
+#Stream<...>
+iex> procedimientos |> Enum.take(5)
+iex> procedimientos |> Enum.to_list
+#+END_SRC
+#+ATTR_HTML: :class note
+
+** Procesos en Elixir =Isolate 2KB Memory=
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 700px
+[[file:images/propiedades_proceso.png]]
+#+END_CENTER
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+Nota9[fn:9]
+#+END_QUOTE
+
+** Supervisión de procesos
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 700px
+[[file:images/supervision_tree.png]]
+#+END_CENTER
+
+** Confiabilidad del 99.9999999%
+#+BEGIN_QUOTE
+一Una red telefonica siempre debera operar independientemente del numero simultaneo de llamadas, bugs inesperados, o llevandose actualizaciones de hardware y software.
+
+      -- Saša Jurić, Elixir in Action
+#+END_QUOTE
+El proyecto insignia de Erlang (construido por Ericsson) es el AXD301. Lograron una =confiabilidad del 99.9999999%, equivalente a 1 segundo de inactividad cada 32 años.=
+
+Esa misma confiabilidad se puede alcanzar con Elixir.
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+Nota13[fn:13]
+#+END_QUOTE
+
+* Pipe Operator y Procesos Concurrentes
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+
+** GenStage: Productores y Consumidores
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 700px
+[[file:images/GenStage.png]]
+#+END_CENTER
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+Nota10[fn:10]
+#+END_QUOTE
+
+** Real World Business Process
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 700px
+[[file:images/real_world_process.png]]
+#+END_CENTER
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+Nota11[fn:11]
+#+END_QUOTE
+
+** Flow
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 700px
+[[file:images/Flow.png]]
+#+END_CENTER
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+Nota12[fn:12]
+#+END_QUOTE
+
+* Metaprogramación
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+
+** Metaprogramación
+¿Quién crea y modifica los lenguajes de programación?
+
+¿Existiran caracteristicas en un lenguaje que no pueden ser implementadas debido decisiones de diseño?
+
+*Con elixir no tienes este problema. Elixir da a sus programadores las herramientas necesarias para poder modificar y extender el lenguaje.*
+** Metaprogramación
+#+BEGIN_QUOTE
+Deja que el lenguaje se acomode a tus necesidades, y no al reves.
+
+-- Me
+#+END_QUOTE
+
+#+BEGIN_QUOTE
+Used properly, metaprogramming lets us create clear, concise programs that treat source code as building blocks instead of as rote lines of instructions.
+
+-- Book: Metaprogramming Elixir
+#+END_QUOTE
+
+** Ejemplos de Uso
+#+BEGIN_SRC elixir
+# Book: Metaprogramming Elixir
+div do
+  h1 class: "title" do
+    text "Hello"
+  end
+  p do
+    text "Metaprogramming Elixir"
+  end
+end
+"<div><h1 class=\"title\">Hello</h1><p>Metaprogramming Elixir</p></div>"
+#+END_SRC
+
+** Ejemplos: Ecto (Database wrapper and language integrated query)
+#+BEGIN_SRC elixir
+# Imports only from/2 of Ecto.Query
+import Ecto.Query, only: [from: 2]
+
+# Create a query
+query = from u in "users",
+          where: u.age > 18,
+          select: u.name
+
+# Send the query to the repository
+Repo.all(query)
+#+END_SRC
+
+** Ejemplos: Ecto (Database wrapper and language integrated query)
+#+BEGIN_SRC elixir
+defmodule User do
+  use Ecto.Schema
+
+  schema "users" do
+    field :name, :string
+    field :age, :integer, default: 0
+    has_many :posts, Post
+  end
+end
+#+END_SRC
+
+** Ejemplos: Absinthe (GrapghQL)
+#+BEGIN_SRC elixir
+mutation do
+  field :submit_comment, :comment do
+    arg :repo_name, non_null(:string)
+    arg :content, non_null(:string)
+
+    resolve &Github.submit_comment/3
+  end
+end
+#+END_SRC
+
+* Polymorphism
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+  The Expression Problem
+
+** The Expression Problem
+#+BEGIN_QUOTE
+How can we add new *types* and *functions* without modifying our existing ones.
+#+END_QUOTE
+
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 550px
+[[file:images/the_expresssion_problem.png]]
+#+END_CENTER
+
+** Polymorphism: Protocols
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 600px
+[[file:images/elixir_protocol.png]]
+#+END_CENTER
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+Nota14[fn:14]
+Nota15[fn:15]
+Nota16[fn:16]
+#+END_QUOTE
+
+** Lenguaje Nuevo: Pocas Librerias?
+- Usar librerias escritas en elixir y Erlang.
+- Comunicarte con otros lenguajes (Python o Ruby) y supervisar su proceso.
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 800px
+[[file:images/erlport.png]]
+#+END_CENTER
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+Nota27[fn:27]
+#+END_QUOTE
+
+* ¿Qué puedes hacer con elixir?
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+
+** Aplicaciones Web
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 800px
+[[file:images/phoenix_framework.png]]
+#+END_CENTER
+
+** Definición de la locura
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 800px
+[[file:images/js_insane.png]]
+#+END_CENTER
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+Nota37[fn:37]
+#+END_QUOTE
+
+** Pero no necesitamos tanto
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 650px
+[[file:images/middle_app.png]]
+#+END_CENTER
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+Nota38[fn:38]
+#+END_QUOTE
+
+** Phoenix LiveView
+Interactive, Real-Time Apps -  No need to write JavaScrit
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 700px
+[[file:images/rainbow.png]]
+#+END_CENTER
+
+
+** Cliente-Side UI
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 400px
+[[file:images/scenic_example.png]]
+#+END_CENTER
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+Nota28[fn:28]
+#+END_QUOTE
+
+** Craft and deploy bulletproof embedded software in Elixir
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 500px
+[[file:images/nerves_logo.png]]
+#+END_CENTER
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+Nota29[fn:29]
+Nota30[fn:30]
+Nota31[fn:31]
+Nota32[fn:32]
+#+END_QUOTE
+
+** Redes Neuronales: Handbook of Neuroevolution Through Erlang
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 200px
+[[file:images/Handbook.jpg]]
+#+END_CENTER
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+Nota33[fn:33]
+Nota34[fn:34]
+Nota35[fn:35]
+Nota36[fn:36]
+#+END_QUOTE
+
+* ¿Quién usa Elixir?
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+
+** Discord
+  :PROPERTIES:
+  :FILL:     images/users/discord-elixir-banner.png
+  :TITLE:    white
+  :SLIDE:    white
+  :END:
+
+** Discord
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 800px
+[[file:images/users/discord_genstage.png]]
+#+END_CENTER
+
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+Nota17[fn:17]
+Nota18[fn:18]
+Nota19[fn:19]
+#+END_QUOTE
+
+** Nintendo Switch
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 800px
+[[file:images/users/nintendo_switch.jpg]]
+#+END_CENTER
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+Nota20[fn:20]
+#+END_QUOTE
+
+** Toyota Connected
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 600px
+[[file:images/users/toyota_connected_conf.png]]
+#+END_CENTER
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+Nota23[fn:23]
+Nota23[fn:24]
+Nota23[fn:25]
+#+END_QUOTE
+
+** Pinterest
+- 200 servidores python a solo 4 con Elixir.
+- 30 instancias c32.xl  con Java a solo 15 con Elixir[fn:22].
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 200px
+[[file:images/users/pinterest.jpeg]]
+#+END_CENTER
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+Nota21[fn:21]
+#+END_QUOTE
+
+** Rose Point (Elixir en Sistemas Embebido)
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 500px
+[[file:images/users/rose_point.jpg]]
+#+END_CENTER
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+Nota26[fn:26]
+#+END_QUOTE
+
+* Thank You ˊ・ω・ˋ
+:PROPERTIES:
+:SLIDE: thank-you-slide segue
+:ASIDE: right
+:ARTICLE: flexbox vleft auto-fadein
+:END:
+
+* Footnotes
+[fn:1] [[https://youtu.be/xrIjfIjssLE][Erlang The Movie - 1986]]
+[fn:2] [[http://www.editgym.com/comics/00001.html][Otros lenguajes]]
+[fn:3] [[https://www.youtube.com/watch?v=YU2i3L-euB0][Por qué deberías aprender programación funcional ya mismo]]
+[fn:4] Bob Ross, pintor de "árboles felices" y del "placer de pintar"
+[fn:5] [[https://www.poetic oding.com/the-beauty-of-pattern-matching-in-elixir/][The beauty of Pattern Matching in elixir]]
+[fn:6] [[https://blog.carbonfive.com/2017/10/19/pattern-matching-in-elixir-five-things-to-remember/][Pattern Matching in Elixir: Five Things To Remember]]
+[fn:7] [[https://elixircasts.io/pipe-operator][Pipe Operator - ElixirCasts]]
+[fn:8] [[https://medium.com/@kkomaz/baby-steps-to-elixir-pipe-operator-a82257bdc28d][Baby Steps to Elixir: Pipe Operator |>]]
+[fn:9] [[https://www.youtube.com/watch?v=iswld-Rpi_g&t=1036s][ElixirConf 2017 - Elixir by the Bellyful - Bryan Hunter]]
+[fn:10] [[https://www.youtube.com/watch?v=XPlXNUXmcgE][GenStage and Flow - José Valim (Lambda Days 2017)]]
+[fn:11] [[https://www.youtube.com/watch?v=ycpNi701aCs][ElixirConf 2018 - Architecting Flow in Elixir From Leveraging Pipes... - René Föhring]]
+[fn:12] [[https://www.youtube.com/watch?v=cgIu6q56xh8][Elixir Flow: Event streaming, Streaming processing, Apache Beam]]
+[fn:13] [[https://vimeo.com/17106893][Mats Cronqvist - The nine nines and how to get there]]
+[fn:14] [[https://www.youtube.com/watch?v=sJvfCE6PFxY][Kevin Rockwood | A Practical Guide to Elixir Protocols]]
+[fn:15] [[https://tech.nested.com/shape-up-with-elixir-protocols-fc78482ec4fc][Shape Up With Elixir Protocols]]
+[fn:16] [[https://tech.nested.com/solving-the-expression-problem-with-elixir-916bb9b5dd74][Solving the Expression Problem with Elixir]]
+[fn:17] [[https://content.nanobox.io/discord-elixir-concurrency-template-high-performance/][Discord's Use of Elixir to Handle Concurrency: A Template for Achieving High Performance]]
+[fn:18] [[https://blog.discordapp.com/tagged/elixir][Discord Blog - Tag Elixir]]
+[fn:19] [[https://www.youtube.com/watch?v=P89N1YJBjpA][ZenMonitor: Scaling Distributed Monitoring at Discord | Code BEAM SF 19]]
+[fn:20] [[https://elixir-fest.jp/][Elixir Fest Japan 2019 - Keynote Speaker]]
+[fn:21] [[https://medium.com/@Pinterest_Engineering/introducing-new-open-source-tools-for-the-elixir-community-2f7bb0bb7d8c][Introducing new open-source tools for the Elixir community]]
+[fn:22] Book - Adopting Elixir - Pagina 13
+[fn:23] [[https://www.youtube.com/watch?v=37V6L1EA4ac][ElixirConf 2017 - Elixir The Toyota Way - Powell Kinney]]
+[fn:24] [[https://codesync.global/media/elixir-powers-first-car-share-service-from-toyota/][Elixir powers first Car Share Service from Toyota]]
+[fn:25] [[https://www.drivehui.com/][Hui - Proyecto de Toyota Connected que usa Elixir]]
+[fn:26] [[http://blog.plataformatec.com.br/2015/06/elixir-in-production-interview-garth-hitches/][Elixir in production interview: Garth Hitchens]]
+[fn:27] [[http://erlport.org/docs/ruby.html][ErlPort Ruby documentation]]
+[fn:28] [[https://www.youtube.com/watch?v=1QNxLNMq3Uw][ElixirConf 2018 - Introducing Scenic A Functional UI Framework - Boyd Multerer]]
+
+[fn:29] [[https://www.youtube.com/watch?v=ARQD4BN_5ns][ElixirConf 2017 - Building an Artificial Pancreas with Elixir and Nerves - Tim Mecklem]]
+[fn:30] [[https://www.youtube.com/watch?v=1bQlc-K6vN0][ElixirConf 2018- My first Nerves Project Bioreactor - David Schainker]]
+[fn:31] [[https://www.youtube.com/watch?v=ad4rlF_kxSI][Paul Wilson - A production-grade Nerves System - ElixirConf EU 2019]]
+[fn:32] [[https://nerves-project.org/][Nerves Project]]
+[fn:33] [[https://www.youtube.com/watch?v=ZgPwqN38xaA][Eric Weinstein | Machine Learning with Elixir and Phoenix]]
+[fn:34] [[https://www.youtube.com/watch?v=ZgPwqN38xaA][Eric Weinstein | Machine Learning with Elixir and Phoenix]]
+[fn:35] [[https://www.youtube.com/watch?v=YE0h9DURSOo][ElixirDaze 2016 - Learn Elixir: Building a Neural Network from Scratch by Karmen Blake]]
+[fn:36] [[http://www.automatingthefuture.com/][Blog de Quentin Thomas]]
+[fn:37] [[https://youtu.be/Z2DU0qLfPIY?t=1080][ElixirConf 2018 - Keynote - Chris McCord]]
+[fn:38] [[https://www.youtube.com/watch?v=8xJzHq8ru0M][Chris McCord - Keynote: Phoenix LiveView - Interactive Apps without Javascript - ElixirConf EU 2019]]

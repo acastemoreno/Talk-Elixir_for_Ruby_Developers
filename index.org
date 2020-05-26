@@ -21,6 +21,203 @@
 #+EXCLUDE_TAGS: noexport
 #+OPTIONS: toc:nil num:nil ^:nil
 #+LANGUAGE: es
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="theme/css/custom.css" />
+
+* Contexto
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+
+* 
+  :PROPERTIES:
+  :FILL:     images/long_time_ago.jpg
+  :TITLE:    white
+  :SLIDE:    white cover-image
+  :END:
+NOT REALLY
+
+* la ley de moore deja de cumplirse, esta situacion es insostenible
+#+BEGIN_CENTER
+#+ATTR_HTML: :height 400px
+[[file:images/cpu0.jpg]]
+#+END_CENTER
+
+* nuevo reto: aprovechar array nucleos
+#+BEGIN_CENTER
+#+ATTR_HTML: :height 400px
+[[file:images/array-procesadores.png]]
+#+END_CENTER
+
+* Concurrencia y paralelismo en Ruby
+#+BEGIN_CENTER
+#+ATTR_HTML: :height 370px
+[[file:images/ruby_process.png]]
+#+END_CENTER
+
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+solo para nota[fn:1]
+solo para nota[fn:2]
+#+END_QUOTE
+
+* Sin considerar side effects (files, db, etc)
+#+BEGIN_CENTER
+#+ATTR_HTML: :height 420px
+[[file:images/ruby_results.png]]
+#+END_CENTER
+
+* debido a diferentes implementaciones de
+#+BEGIN_CENTER
+#+ATTR_HTML: :height 340px
+[[file:images/threads-memory.png]]
+#+END_CENTER
+
+* Dangerous Situation
+#+BEGIN_CENTER
+#+ATTR_HTML: :height 340px
+[[file:images/multithreaded_programming.jpg]]
+#+END_CENTER
+
+* 
+  :PROPERTIES:
+  :FILL:     images/padawan.jpeg
+  :TITLE:    white
+  :SLIDE:    white contain-image
+  :END:
+
+* Segue (Hide Title)
+  :PROPERTIES:
+  :TITLE: hide
+  :SLIDE: segue dark quote
+  :ASIDE: right bottom
+  :ARTICLE: flexbox vleft auto-fadein line-through
+  :END:
+#+BEGIN_QUOTE
+Hasta que un joven programador, parte de la core team de Ruby on Rails, aparecio.
+#+END_QUOTE
+
+* Jose Valim
+#+BEGIN_CENTER
+#+ATTR_HTML: :height 400px
+[[file:images/jose_valim.jpg]]
+#+END_CENTER
+
+* se encontro con un libro
+#+BEGIN_CENTER
+#+ATTR_HTML: :height 420px
+[[file:images/seven_language.jpg]]
+#+END_CENTER
+
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+solo para nota[fn:3]
+#+END_QUOTE
+
+* 
+  :PROPERTIES:
+  :FILL:     images/Erlang_logo.png
+  :TITLE:    white
+  :SLIDE:    white contain-image
+  :END:
+
+* 
+  :PROPERTIES:
+  :FILL:     images/telefonista.jpg
+  :TITLE:    white
+  :SLIDE:    white contain-image
+  :END:
+
+* [[https://www.youtube.com/watch?v=xrIjfIjssLE&feature=youtu.be][Erlang The Movie - 1986]]
+#+BEGIN_CENTER
+#+ATTR_HTML: :height 420px
+[[file:images/erlang_the_movie.jpg]]
+#+END_CENTER
+
+* Segue (Hide Title)
+  :PROPERTIES:
+  :TITLE: hide
+  :SLIDE: segue dark quote
+  :ASIDE: right bottom
+  :ARTICLE: flexbox vleft auto-fadein line-through
+  :END:
+#+BEGIN_QUOTE
+Una red telefonica siempre debera operar independientemente del numero simultaneo de llamadas, bugs inesperados, o llevandose actualizaciones de hardware y software.
+
+– Saša Jurić, Elixir in Action
+#+END_QUOTE
+
+* Segue (Hide Title)
+  :PROPERTIES:
+  :TITLE: hide
+  :SLIDE: segue dark quote
+  :ASIDE: right bottom
+  :ARTICLE: flexbox vleft auto-fadein line-through
+  :END:
+#+BEGIN_QUOTE
+Jose Valim, empezo haciendo un port de Ruby en el ecosistema Erlang (aprovechar casi 40 años de desarrollo)
+
+UPSS
+
+Terminó creando un nuevo lenguaje.
+#+END_QUOTE
+
+* Proceso de creación (2011)
+#+BEGIN_CENTER
+#+ATTR_HTML: :height 420px
+[[file:images/pineapple_pen.gif]]
+#+END_CENTER
+
+* 
+  :PROPERTIES:
+  :FILL:     images/logos.jpg
+  :TITLE:    white
+  :SLIDE:    white contain-image
+  :END:
+
+* Ruby -> Elixir (Developer Joy)
+#+BEGIN_CENTER
+#+ATTR_HTML: :height 400px
+[[file:images/BOB-ROSS.jpg]]
+#+END_CENTER
+
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+solo para nota[fn:4]
+#+END_QUOTE
+
+* Erlang -> Elixir (Runtime and 40 years of libraries)
+#+BEGIN_CENTER
+#+ATTR_HTML: :height 420px
+[[file:images/erlang_elixir.png]]
+#+END_CENTER
+
+* Clojure -> Elixir (Metaprogramación)
+#+BEGIN_CENTER
+#+ATTR_HTML: :height 420px
+[[file:images/metaprogramming.jpg]]
+#+END_CENTER
+
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+solo para nota[fn:5]
+#+END_QUOTE
+
+
+* Segue (Hide Title)
+  :PROPERTIES:
+  :TITLE: hide
+  :SLIDE: segue dark quote
+  :ASIDE: right bottom
+  :ARTICLE: flexbox vleft auto-fadein line-through
+  :END:
+#+BEGIN_QUOTE
+Elixir is what would happen if Erlang, Clojure, and Ruby somehow had a baby and it wasn’t an accident.
+
+–Devin Torres
+#+END_QUOTE
+
 
 * Thank You ʕ•ᴥ•ʔ
 :PROPERTIES:
@@ -28,3 +225,10 @@
 :ASIDE: right
 :ARTICLE: flexbox vleft auto-fadein
 :END:
+
+* Footnotes
+[fn:1] [[http://nathanmlong.com/2017/06/concurrency-vs-paralellism/][Recomendado: Concurrency vs Paralellism - Burrito shop context]]
+[fn:2] [[https://www.youtube.com/watch?v=xoNRtWl4fZU&feature=youtu.be&t=4m44s][ElixirDaze 2016 - Processing 2.7 million images with Elixir (vs Ruby) by David Padilla]]
+[fn:3] [[https://pragprog.com/book/btlang/seven-languages-in-seven-weeks][Seven languages in seven weeks]]
+[fn:4] Bob Ross, pintor de "árboles felices" y del "placer de pintar
+[fn:5] [[https://pragprog.com/book/cmelixir/metaprogramming-elixir][Metaprogramming Elixir]]

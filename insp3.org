@@ -1,0 +1,406 @@
+* Slide Options                           :noexport:
+# ======= Appear in cover-slide ====================
+#+TITLE: ¿Por qué aprender a programar?
+#+SUBTITLE: code is for everyone
+#+AUTHOR: Albert Castellano Moreno
+
+# ======= Appear in thank-you-slide ================
+#+GITHUB: http://github.com/acastemoreno
+#+COMPANY: QODE
+
+# ======= Appear under each slide ==================
+#+FAVICON: images/qode-logo.png
+#+ICON: images/qode-logo.png
+#+HASHTAG: #programming #learning #inel
+
+# ======= Google Analytics =========================
+#+ANALYTICS: ----
+
+# ======= Org settings =========================
+#+EXCLUDE_TAGS: noexport
+#+OPTIONS: toc:nil num:nil ^:nil
+
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="theme/css/custom.css" />
+
+* Quien eres amiguito?
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+
+* 
+  :PROPERTIES:
+  :SLIDE: me
+  :END:
+#+BEGIN_CENTER
+#+BEGIN_EXPORT html
+<div class="present">
+  <img class="photo" src="images/photo.jpg">
+  <div>
+#+END_EXPORT
+Formación:
+- *BSc* en Ingeniería Mecánica (UNI)
+- Actualmente tomando el bootcamp de [[https://codeable.pe/][Codeable]]
+Experiencia Laboral:
+- Full-Stack Developer
+- Ingeniero de control y automatización.
+#+BEGIN_EXPORT html
+  </div>
+<div>
+#+END_EXPORT
+#+END_CENTER
+
+* Servicios
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 1000px
+[[file:images/servicios.png]]
+#+END_CENTER
+
+* Voluntario
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 800px
+[[file:images/voluntario.png]]
+#+END_CENTER
+
+* Languages
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 900px
+[[file:images/languages.png]]
+#+END_CENTER
+
+* Qué es programacion?
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+
+* Segue (Hide Title)
+  :PROPERTIES:
+  :TITLE: hide
+  :SLIDE: segue dark quote
+  :ASIDE: right bottom
+  :ARTICLE: flexbox vleft auto-fadein line-through
+  :END:
+#+BEGIN_QUOTE
+Programar es dar instrucciones a una computadora para que haga algo por ti.
+#+END_QUOTE
+
+* 
+  :PROPERTIES:
+  :FILL:     images/people.jpg
+  :TITLE:    white
+  :SLIDE:    white cover-image
+  :END:
+
+* Segue (Hide Title)
+  :PROPERTIES:
+  :TITLE: hide
+  :SLIDE: segue dark quote
+  :ASIDE: right bottom
+  :ARTICLE: flexbox vleft auto-fadein
+  :END:
+#+BEGIN_QUOTE
+Programación trata sobre humanidad
+#+END_QUOTE
+
+* Objetivo
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+
+* 
+  :PROPERTIES:
+  :FILL:     images/help-people.jpg
+  :TITLE:    white
+  :SLIDE:    white cover-image
+  :END:
+
+* Comunidad
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+
+* 
+  :PROPERTIES:
+  :FILL:     images/working-together.jpg
+  :TITLE:    white
+  :SLIDE:    white cover-image
+  :END:
+
+* 
+  :PROPERTIES:
+  :FILL:     images/elixir-girls.jpg
+  :TITLE:    white
+  :SLIDE:    white cover-image
+  :END:
+
+* 
+  :PROPERTIES:
+  :FILL:     images/elixir_child.jpeg
+  :TITLE:    white
+  :SLIDE:    white cover-image
+  :END:
+
+* 
+  :PROPERTIES:
+  :FILL:     images/elixir-with-love.jpg
+  :TITLE:    white
+  :SLIDE:    white contain-image
+  :END:
+
+* 
+  :PROPERTIES:
+  :FILL:     images/elixir-with-love-stickers.jpg
+  :TITLE:    white
+  :SLIDE:    white contain-image
+  :END:
+
+* Diversidad
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+
+* 
+  :PROPERTIES:
+  :FILL:     images/diversidad.jpg
+  :TITLE:    white
+  :SLIDE:    white cover-image
+  :END:
+
+* 
+  :PROPERTIES:
+  :FILL:     images/code-laptop.jpeg
+  :TITLE:    white
+  :SLIDE:    white cover-image
+  :END:
+
+* 
+  :PROPERTIES:
+  :FILL:     images/java.png
+  :TITLE:    white
+  :SLIDE:    white contain-image
+  :END:
+
+* 
+  :PROPERTIES:
+  :FILL:     images/elixir.png
+  :TITLE:    white
+  :SLIDE:    white cover-image
+  :END:
+
+* 
+  :PROPERTIES:
+  :FILL:     images/topicos.png
+  :TITLE:    white
+  :SLIDE:    white cover-image
+  :END:
+
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+solo para nota[fn:8]
+solo para nota[fn:9]
+#+END_QUOTE
+
+* 
+  :PROPERTIES:
+  :FILL:     images/emojicode.jpg
+  :TITLE:    white
+  :SLIDE:    white contain-image
+  :END:
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+solo para nota[fn:1]
+#+END_QUOTE
+
+* Visual
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 550px
+[[file:images/scratch.png]]
+#+END_CENTER
+
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+solo para nota[fn:2]
+#+END_QUOTE
+
+* 
+  :PROPERTIES:
+  :FILL:     images/puredata.png
+  :TITLE:    white
+  :SLIDE:    white cover-image
+  :END:
+
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+solo para nota[fn:3]
+#+END_QUOTE
+
+* 
+  :PROPERTIES:
+  :FILL:     images/Piet_hello_big.png
+  :TITLE:    white
+  :SLIDE:    white contain-image
+  :END:
+
+* 
+  :PROPERTIES:
+  :FILL:     images/velato.jpeg
+  :TITLE:    white
+  :SLIDE:    white contain-image
+  :END:
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+solo para nota[fn:6]
+solo para nota[fn:7]
+solo para nota[fn:5]
+#+END_QUOTE
+
+* Por qué deberia aprender a programar?
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+
+* Segue (Hide Title)
+  :PROPERTIES:
+  :TITLE: hide
+  :SLIDE: segue dark quote
+  :ASIDE: right bottom
+  :ARTICLE: flexbox vleft auto-fadein
+  :END:
+#+BEGIN_QUOTE
+I think everybody in this country should learn how to program a computer because it teaches you how to think.
+
+  -- Steve Jobs
+#+END_QUOTE
+
+* 
+  :PROPERTIES:
+  :FILL:     images/la-creacion.jpg
+  :TITLE:    white
+  :SLIDE:    white contain-image
+  :END:
+
+* 
+  :PROPERTIES:
+  :FILL:     images/creative.jpg
+  :TITLE:    white
+  :SLIDE:    white contain-image
+  :END:
+
+* Segue (Hide Title)
+  :PROPERTIES:
+  :TITLE: hide
+  :SLIDE: segue dark quote
+  :ASIDE: right bottom
+  :ARTICLE: flexbox vleft auto-fadein
+  :END:
+#+BEGIN_QUOTE
+Sea que quieras ganar mucho dinero o cambiar el mundo, saber programar es una habilidad increiblemente poderosa.
+#+END_QUOTE
+
+* Segue (Hide Title)
+  :PROPERTIES:
+  :TITLE: hide
+  :SLIDE: segue dark quote
+  :ASIDE: right bottom
+  :ARTICLE: flexbox vleft auto-fadein
+  :END:
+#+BEGIN_QUOTE
+El codigo no discrimina.
+#+END_QUOTE
+
+* Segue (Hide Title)
+  :PROPERTIES:
+  :TITLE: hide
+  :SLIDE: segue dark quote
+  :ASIDE: right bottom
+  :ARTICLE: flexbox vleft auto-fadein
+  :END:
+#+BEGIN_QUOTE
+Code is for everyone.
+#+END_QUOTE
+
+* 
+  :PROPERTIES:
+  :FILL:     images/ratatouille.jpg
+  :TITLE:    white
+  :SLIDE:    white contain-image
+  :END:
+
+* 
+  :PROPERTIES:
+  :FILL:     images/mindset.png
+  :TITLE:    white
+  :SLIDE:    white contain-image
+  :END:
+
+* Como empiezo
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+
+* Segue (Hide Title)
+  :PROPERTIES:
+  :TITLE: hide
+  :SLIDE: segue dark quote
+  :ASIDE: right bottom
+  :ARTICLE: flexbox vleft auto-fadein
+  :END:
+#+BEGIN_QUOTE
+Ten un objetivo claro. ¿Para que quieres aprender a programar?
+#+END_QUOTE
+
+* Segue (Hide Title)
+  :PROPERTIES:
+  :TITLE: hide
+  :SLIDE: segue dark quote
+  :ASIDE: right bottom
+  :ARTICLE: flexbox vleft auto-fadein
+  :END:
+#+BEGIN_QUOTE
+Empieza por algo pequeño.
+#+END_QUOTE
+
+* Need Help?
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+
+* 
+  :PROPERTIES:
+  :FILL:     images/codeable.png
+  :TITLE:    white
+  :SLIDE:    white contain-image
+  :END:
+
+* Gracias ʕ•ᴥ•ʔ
+:PROPERTIES:
+:SLIDE: thank-you-slide segue
+:ASIDE: right
+:ARTICLE: flexbox vleft auto-fadein
+:END:
+
+* Footnotes
+[fn:1] [[https://www.emojicode.org/docs/guides/compile-and-run.html][Emojicode]]
+[fn:2] [[https://scratch.mit.edu/projects/378837638/][Scratch]]
+[fn:3] [[https://pragprog.com/book/thsound/programming-sound-with-pure-data][Pure Data]]
+[fn:4] [[https://www.dangermouse.net/esoteric/piet/samples.html][Piet]]
+[fn:5] [[http://www.99-bottles-of-beer.net/abc.html][1500 languages for same program]]
+[fn:6] [[https://github.com/thorncp/hello-velato][Velato Example]]
+[fn:7] [[https://www.youtube.com/watch?v=Fhni-6Q5z80][Velato-youtube]]
+[fn:8] [[https://www.youtube.com/watch?v=8pTEmbeENF4][Future of programing - youtube]]
+[fn:9] [[https://github.com/acastemoreno/Sudoku-solver/blob/master/sudoku.pl][Sudoku github]]
