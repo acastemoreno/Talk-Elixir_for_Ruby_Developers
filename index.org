@@ -1,7 +1,7 @@
 * Slide Options                           :noexport:
 # ======= Appear in cover-slide ====================
 #+TITLE: Elixir for Ruby Developers
-#+SUBTITLE: Introduction to Language and cool stufs
+#+SUBTITLE: Introduction to Language
 #+COMPANY: Codeable
 #+AUTHOR: Albert Castellano Moreno
 #+EMAIL: acastemoreno@gmail.com
