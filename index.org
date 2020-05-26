@@ -336,7 +336,7 @@ Nota15[fn:15]
   :ASIDE: right bottom
   :ARTICLE: flexbox vleft auto-fadein line-through
   :END:
-#+BEGIN_QUOTE:
+#+BEGIN_QUOTE
 Manten un ojo en Elixir.
 
 Crecera mucho mas.
