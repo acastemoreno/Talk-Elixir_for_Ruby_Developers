@@ -7,3 +7,12 @@ slides > slide.contain-image{
   background-size: contain;
   background-position: center;
 }
+
+.white_footer {
+  a, p{
+    color: white;
+  }
+  a{
+    border-bottom: 1px solid white;
+  }
+}

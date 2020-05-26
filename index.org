@@ -204,7 +204,6 @@ solo para nota[fn:4]
 solo para nota[fn:5]
 #+END_QUOTE
 
-
 * Segue (Hide Title)
   :PROPERTIES:
   :TITLE: hide
@@ -218,6 +217,132 @@ Elixir is what would happen if Erlang, Clojure, and Ruby somehow had a baby and 
 –Devin Torres
 #+END_QUOTE
 
+* Some Companies using Elixir
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+
+* 
+  :PROPERTIES:
+  :FILL:     images/companies/discord-elixir-banner.png
+  :TITLE:    white
+  :SLIDE:    white cover-image white_footer
+  :END:
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+solo para nota[fn:6]
+solo para nota[fn:7]
+solo para nota[fn:8]
+#+END_QUOTE
+
+* 
+#+BEGIN_CENTER
+#+ATTR_HTML: :height 420px
+[[file:images/companies/toyota_connected_conf.png]]
+#+END_CENTER
+
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+Nota9[fn:9]
+Nota10[fn:10]
+Nota11[fn:11]
+#+END_QUOTE
+
+* 
+#+BEGIN_CENTER
+#+ATTR_HTML: :height 320px
+[[file:images/companies/pinterest.jpeg]]
+#+END_CENTER
+
+- 200 servidores python a solo 4 con Elixir.
+- 30 instancias c32.xl con Java a solo 15 con Elixir[fn:12].
+
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+Nota13[fn:13]
+#+END_QUOTE
+
+* 
+#+BEGIN_CENTER
+#+ATTR_HTML: :height 420px
+[[file:images/companies/apc-schneider.jpg]]
+#+END_CENTER
+
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+Nota14[fn:14]
+#+END_QUOTE
+
+* 
+#+BEGIN_CENTER
+#+ATTR_HTML: :height 420px
+[[file:images/companies/square_enix.png]]
+#+END_CENTER
+
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+Nota15[fn:15]
+#+END_QUOTE
+
+* Ruby vs Elixir
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+
+* 
+  :PROPERTIES:
+  :FILL:     images/most_loved.png
+  :TITLE:    white
+  :SLIDE:    white contain-image
+  :END:
+
+* 
+  :PROPERTIES:
+  :FILL:     images/most_dreaded.png
+  :TITLE:    white
+  :SLIDE:    white contain-image
+  :END:
+
+* 
+  :PROPERTIES:
+  :FILL:     images/most_wanted.png
+  :TITLE:    white
+  :SLIDE:    white contain-image
+  :END:
+
+
+* 
+  :PROPERTIES:
+  :FILL:     images/most_payed.png
+  :TITLE:    white
+  :SLIDE:    white contain-image
+  :END:
+
+* 
+  :PROPERTIES:
+  :FILL:     images/graph-survey.svg
+  :TITLE:    white
+  :SLIDE:    white contain-image
+  :END:
+
+* Segue (Hide Title)
+  :PROPERTIES:
+  :TITLE: hide
+  :SLIDE: segue dark quote
+  :ASIDE: right bottom
+  :ARTICLE: flexbox vleft auto-fadein line-through
+  :END:
+#+BEGIN_QUOTE:
+Manten un ojo en Elixir.
+
+Crecera mucho mas.
+
+Es relativamente sencillo aprender Elixir sabiendo Ruby.
+#+END_QUOTE
 
 * Thank You ʕ•ᴥ•ʔ
 :PROPERTIES:
@@ -232,3 +357,13 @@ Elixir is what would happen if Erlang, Clojure, and Ruby somehow had a baby and 
 [fn:3] [[https://pragprog.com/book/btlang/seven-languages-in-seven-weeks][Seven languages in seven weeks]]
 [fn:4] Bob Ross, pintor de "árboles felices" y del "placer de pintar
 [fn:5] [[https://pragprog.com/book/cmelixir/metaprogramming-elixir][Metaprogramming Elixir]]
+[fn:6] [[https://content.nanobox.io/discord-elixir-concurrency-template-high-performance/][Discord's Use of Elixir to Handle Concurrency: A Template for Achieving High Performance]]
+[fn:7] [[https://blog.discordapp.com/tagged/elixir][Discord Blog - Tag Elixir]]
+[fn:8] [[https://www.youtube.com/watch?v=P89N1YJBjpA][ZenMonitor: Scaling Distributed Monitoring at Discord | Code BEAM SF 19]]
+[fn:9] [[https://www.youtube.com/watch?v=37V6L1EA4ac][ElixirConf 2017 - Elixir The Toyota Way - Powell Kinney]]
+[fn:10] [[https://codesync.global/media/elixir-powers-first-car-share-service-from-toyota/][Elixir powers first Car Share Service from Toyota]]
+[fn:11] [[https://www.drivehui.com/][Hui - Proyecto de Toyota Connected que usa Elixir]]
+[fn:12] [[https://pragprog.com/book/tvmelixir/adopting-elixir][Adopting Elixir]] - Pagina 13
+[fn:13] [[https://medium.com/@Pinterest_Engineering/introducing-new-open-source-tools-for-the-elixir-community-2f7bb0bb7d8c][Introducing new open-source tools for the Elixir community]]
+[fn:14] [[https://github.com/se-apc][APC Github]]
+[fn:15] [[https://apply.workable.com/square-enix/j/DE5E1A81A1/][Job to apply - Back End Developer - Ruby / Elixir]]
