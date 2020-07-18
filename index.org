@@ -281,7 +281,7 @@ solo para nota[fn:16]
 
 * 
   :PROPERTIES:
-  :FILL:     images/erlang_vm
+  :FILL:     images/erlang_vm.png
   :TITLE:    white
   :SLIDE:    white contain-image
   :END:
