@@ -23,31 +23,30 @@
 #+LANGUAGE: es
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="theme/css/custom.css" />
 
-* Contexto
+* ¿Por qué fue creado?
   :PROPERTIES:
   :SLIDE:    segue dark quote
   :ASIDE:    right bottom
   :ARTICLE:  flexbox vleft auto-fadein
   :END:
 
+* Ruby (one hard problem)
+#+BEGIN_CENTER
+#+ATTR_HTML: :height 350px
+[[file:images/ruby.png]]
+#+END_CENTER
+
 * 
   :PROPERTIES:
-  :FILL:     images/long_time_ago.jpg
+  :FILL:     images/frustation.gif
   :TITLE:    white
-  :SLIDE:    white cover-image
+  :SLIDE:    white contain-image
   :END:
-NOT REALLY
 
-* la ley de moore deja de cumplirse, esta situacion es insostenible
+* Aprovechar arquitectura multinucleo
 #+BEGIN_CENTER
 #+ATTR_HTML: :height 400px
 [[file:images/cpu0.jpg]]
-#+END_CENTER
-
-* nuevo reto: aprovechar array nucleos
-#+BEGIN_CENTER
-#+ATTR_HTML: :height 400px
-[[file:images/array-procesadores.png]]
 #+END_CENTER
 
 * Concurrencia y paralelismo en Ruby
@@ -62,30 +61,35 @@ solo para nota[fn:1]
 solo para nota[fn:2]
 #+END_QUOTE
 
-* Sin considerar side effects (files, db, etc)
-#+BEGIN_CENTER
-#+ATTR_HTML: :height 420px
-[[file:images/ruby_results.png]]
-#+END_CENTER
-
-* debido a diferentes implementaciones de
+* genial, vayamos por jruby (pero existe un problema)
 #+BEGIN_CENTER
 #+ATTR_HTML: :height 340px
 [[file:images/threads-memory.png]]
 #+END_CENTER
 
-* Dangerous Situation
+* Ejemplo
 #+BEGIN_CENTER
-#+ATTR_HTML: :height 340px
-[[file:images/multithreaded_programming.jpg]]
+#+ATTR_HTML: :height 440px
+[[file:images/codigo.png]]
 #+END_CENTER
 
-* 
-  :PROPERTIES:
-  :FILL:     images/padawan.jpeg
-  :TITLE:    white
-  :SLIDE:    white contain-image
-  :END:
+* Unexpected results
+#+BEGIN_CENTER
+#+ATTR_HTML: :height 440px
+[[file:images/ruby_results.png]]
+#+END_CENTER
+
+* Pequeño adelanto (use case)
+Procesar 2.7 millones de imagenes (downdload from aws, resize and upload)
+- Ruby v2: 
+  - *31.25* dias.
+- Jruby:
+  - *18 dias*
+  - Hard time en desarrollo
+- Elixir: 
+  - *4 dias* 
+  - 12 dias para figurar como trabajar con Elixir xD
+  - *WORTH IT!*
 
 * Segue (Hide Title)
   :PROPERTIES:
@@ -95,10 +99,10 @@ solo para nota[fn:2]
   :ARTICLE: flexbox vleft auto-fadein line-through
   :END:
 #+BEGIN_QUOTE
-Hasta que un joven programador, parte de la core team de Ruby on Rails, aparecio.
+Hasta que un joven programador aparecio.
 #+END_QUOTE
 
-* Jose Valim
+* Jose Valim (parte de la core team de Ruby on Rails)
 #+BEGIN_CENTER
 #+ATTR_HTML: :height 400px
 [[file:images/jose_valim.jpg]]
@@ -117,13 +121,6 @@ solo para nota[fn:3]
 
 * 
   :PROPERTIES:
-  :FILL:     images/Erlang_logo.png
-  :TITLE:    white
-  :SLIDE:    white contain-image
-  :END:
-
-* 
-  :PROPERTIES:
   :FILL:     images/telefonista.jpg
   :TITLE:    white
   :SLIDE:    white contain-image
@@ -134,6 +131,13 @@ solo para nota[fn:3]
 #+ATTR_HTML: :height 420px
 [[file:images/erlang_the_movie.jpg]]
 #+END_CENTER
+
+* 
+  :PROPERTIES:
+  :FILL:     images/Erlang_logo.png
+  :TITLE:    white
+  :SLIDE:    white contain-image
+  :END:
 
 * Segue (Hide Title)
   :PROPERTIES:
@@ -156,11 +160,31 @@ Una red telefonica siempre debera operar independientemente del numero simultane
   :ARTICLE: flexbox vleft auto-fadein line-through
   :END:
 #+BEGIN_QUOTE
-Jose Valim, empezo haciendo un port de Ruby en el ecosistema Erlang (aprovechar casi 40 años de desarrollo)
+Cualidades necesarias en sistemas modernos.
+#+END_QUOTE
 
-UPSS
+* Segue (Hide Title)
+  :PROPERTIES:
+  :TITLE: hide
+  :SLIDE: segue dark quote
+  :ASIDE: right bottom
+  :ARTICLE: flexbox vleft auto-fadein line-through
+  :END:
+#+BEGIN_QUOTE
+La idea original de Jose era llevar los conceptos de Erlang a Ruby.
+#+END_QUOTE
 
-Terminó creando un nuevo lenguaje.
+* Segue (Hide Title)
+  :PROPERTIES:
+  :TITLE: hide
+  :SLIDE: segue dark quote
+  :ASIDE: right bottom
+  :ARTICLE: flexbox vleft auto-fadein line-through
+  :END:
+#+BEGIN_QUOTE
+Pero simplemente no podia llevar 40 años de desarrollo a Ruby.
+
+Termino creando un nuevo lenguaje
 #+END_QUOTE
 
 * Proceso de creación (2011)
@@ -187,9 +211,9 @@ Terminó creando un nuevo lenguaje.
 solo para nota[fn:4]
 #+END_QUOTE
 
-* Erlang -> Elixir (Runtime and 40 years of libraries)
+* Erlang -> Elixir (40 years of Development)
 #+BEGIN_CENTER
-#+ATTR_HTML: :height 420px
+#+ATTR_HTML: :height 380px
 [[file:images/erlang_elixir.png]]
 #+END_CENTER
 
@@ -216,6 +240,155 @@ Elixir is what would happen if Erlang, Clojure, and Ruby somehow had a baby and 
 
 –Devin Torres
 #+END_QUOTE
+
+* Some Concepts
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+
+* BEAM (Virtual Machine)
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+
+* Sistema Operativo
+#+BEGIN_CENTER
+#+ATTR_HTML: :height 420px
+[[file:images/OS.png]]
+#+END_CENTER
+
+#+ATTR_HTML: :class note
+#+BEGIN_QUOTE
+solo para nota[fn:16]
+#+END_QUOTE
+
+* Application
+#+BEGIN_CENTER
+#+ATTR_HTML: :height 420px
+[[file:images/OS.png]]
+#+END_CENTER
+
+* 
+  :PROPERTIES:
+  :FILL:     images/Night_Of_The_Living_Dead.jpg
+  :TITLE:    white
+  :SLIDE:    white contain-image
+  :END:
+
+* 
+  :PROPERTIES:
+  :FILL:     images/erlang_vm
+  :TITLE:    white
+  :SLIDE:    white contain-image
+  :END:
+
+* Segue (Hide Title)
+  :PROPERTIES:
+  :TITLE: hide
+  :SLIDE: segue dark quote
+  :ASIDE: right bottom
+  :ARTICLE: flexbox vleft auto-fadein line-through
+  :END:
+#+BEGIN_QUOTE
+BEAM (Erlang VM) no es un sistema operativo de proposito general.
+#+END_QUOTE
+
+* Segue (Hide Title)
+  :PROPERTIES:
+  :TITLE: hide
+  :SLIDE: segue dark quote
+  :ASIDE: right bottom
+  :ARTICLE: flexbox vleft auto-fadein line-through
+  :END:
+#+BEGIN_QUOTE
+El proposito general de BEAM es ser un lugar solido donde ejecutar codigo.
+#+END_QUOTE
+
+* Actors (Procesos BEAM)
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+
+* 
+  :PROPERTIES:
+  :FILL:     images/props_process.png
+  :TITLE:    white
+  :SLIDE:    white contain-image
+  :END:
+
+* Scheduler(Ejecutar procesos en los CPU Core)
+#+BEGIN_CENTER
+#+ATTR_HTML: :height 420px
+[[file:images/schedule_reductions.png]]
+#+END_CENTER
+
+* Scheduler(Procesos esperando mensaje, proceso fuera de la cola de ejecucion)
+#+BEGIN_CENTER
+#+ATTR_HTML: :height 380px
+[[file:images/schedule_mailbox.png]]
+#+END_CENTER
+
+* Arbol de supervision
+#+BEGIN_CENTER
+#+ATTR_HTML: :height 420px
+[[file:images/supervision_tree.png]]
+#+END_CENTER
+
+* 
+  :PROPERTIES:
+  :FILL:     images/let_it_crash.png
+  :TITLE:    white
+  :SLIDE:    white contain-image
+  :END:
+
+* Por qué aprender Elixir?
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+
+* Performance y Projects
+- [[https://phoenixframework.org/blog/the-road-to-2-million-websocket-connections][2 Millones de WebSocket Conections (2015)]]
+
+- [[https://twitter.com/robmadole/status/1278055974519988224][Font Awesome - 100 and 250 microseconds]]
+
+- Telemetry (DEMO)
+
+- Livew View (DEMO)
+
+* Comunidad
+#+BEGIN_CENTER
+#+ATTR_HTML: :height 420px
+[[file:images/liked.png]]
+#+END_CENTER
+
+* 
+  :PROPERTIES:
+  :FILL:     images/elixir_with_love.png
+  :TITLE:    white
+  :SLIDE:    white contain-image
+  :END:
+
+* 
+  :PROPERTIES:
+  :FILL:     images/elixir-girls.jpg
+  :TITLE:    white
+  :SLIDE:    white contain-image
+  :END:
+
+* 
+  :PROPERTIES:
+  :FILL:     images/elixir_child.jpeg
+  :TITLE:    white
+  :SLIDE:    white contain-image
+  :END:
 
 * Some Companies using Elixir
   :PROPERTIES:
@@ -286,64 +459,6 @@ Nota14[fn:14]
 Nota15[fn:15]
 #+END_QUOTE
 
-* Ruby vs Elixir
-  :PROPERTIES:
-  :SLIDE:    segue dark quote
-  :ASIDE:    right bottom
-  :ARTICLE:  flexbox vleft auto-fadein
-  :END:
-
-* 
-  :PROPERTIES:
-  :FILL:     images/most_loved.png
-  :TITLE:    white
-  :SLIDE:    white contain-image
-  :END:
-
-* 
-  :PROPERTIES:
-  :FILL:     images/most_dreaded.png
-  :TITLE:    white
-  :SLIDE:    white contain-image
-  :END:
-
-* 
-  :PROPERTIES:
-  :FILL:     images/most_wanted.png
-  :TITLE:    white
-  :SLIDE:    white contain-image
-  :END:
-
-
-* 
-  :PROPERTIES:
-  :FILL:     images/most_payed.png
-  :TITLE:    white
-  :SLIDE:    white contain-image
-  :END:
-
-* 
-  :PROPERTIES:
-  :FILL:     images/graph-survey.svg
-  :TITLE:    white
-  :SLIDE:    white contain-image
-  :END:
-
-* Segue (Hide Title)
-  :PROPERTIES:
-  :TITLE: hide
-  :SLIDE: segue dark quote
-  :ASIDE: right bottom
-  :ARTICLE: flexbox vleft auto-fadein line-through
-  :END:
-#+BEGIN_QUOTE
-Manten un ojo en Elixir.
-
-Crecera mucho mas.
-
-Es relativamente sencillo aprender Elixir sabiendo Ruby.
-#+END_QUOTE
-
 * Thank You ʕ•ᴥ•ʔ
 :PROPERTIES:
 :SLIDE: thank-you-slide segue
@@ -355,7 +470,7 @@ Es relativamente sencillo aprender Elixir sabiendo Ruby.
 [fn:1] [[http://nathanmlong.com/2017/06/concurrency-vs-paralellism/][Recomendado: Concurrency vs Paralellism - Burrito shop context]]
 [fn:2] [[https://www.youtube.com/watch?v=xoNRtWl4fZU&feature=youtu.be&t=4m44s][ElixirDaze 2016 - Processing 2.7 million images with Elixir (vs Ruby) by David Padilla]]
 [fn:3] [[https://pragprog.com/book/btlang/seven-languages-in-seven-weeks][Seven languages in seven weeks]]
-[fn:4] Bob Ross, pintor de "árboles felices" y del "placer de pintar
+[fn:4] Bob Ross, pintor de "árboles felices" y del "placer de pintar"
 [fn:5] [[https://pragprog.com/book/cmelixir/metaprogramming-elixir][Metaprogramming Elixir]]
 [fn:6] [[https://content.nanobox.io/discord-elixir-concurrency-template-high-performance/][Discord's Use of Elixir to Handle Concurrency: A Template for Achieving High Performance]]
 [fn:7] [[https://blog.discordapp.com/tagged/elixir][Discord Blog - Tag Elixir]]
@@ -367,3 +482,4 @@ Es relativamente sencillo aprender Elixir sabiendo Ruby.
 [fn:13] [[https://medium.com/@Pinterest_Engineering/introducing-new-open-source-tools-for-the-elixir-community-2f7bb0bb7d8c][Introducing new open-source tools for the Elixir community]]
 [fn:14] [[https://github.com/se-apc][APC Github]]
 [fn:15] [[https://apply.workable.com/square-enix/j/DE5E1A81A1/][Job to apply - Back End Developer - Ruby / Elixir]]
+[fn:16] [[https://en.wikipedia.org/wiki/Operating_system][https://en.wikipedia.org/wiki/Operating_system]]
