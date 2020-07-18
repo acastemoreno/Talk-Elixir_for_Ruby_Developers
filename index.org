@@ -269,7 +269,7 @@ solo para nota[fn:16]
 * Application
 #+BEGIN_CENTER
 #+ATTR_HTML: :height 420px
-[[file:images/OS.png]]
+[[file:images/application.png]]
 #+END_CENTER
 
 * 
