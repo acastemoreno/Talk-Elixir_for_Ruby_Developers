@@ -344,6 +344,22 @@ Podemos usar algo más elegante y eficiente
 [[file:images/chain_function.png]]
 #+END_CENTER
 
+** Macros (Metaprogramación)
+- Demo Time
+#+BEGIN_SRC elixir
+iex> require MyMacro
+iex> MyMacro.say(3+4)
+iex> MyMacro.say(3*4)
+#+END_SRC
+
+** With (Special Form)
+- Demo Time
+#+BEGIN_SRC elixir
+iex> SpecialForm.with("holi")
+iex> SpecialForm.with(%{width: 100})
+iex> SpecialForm.with(%{width: 100, height: 200})
+#+END_SRC
+
 * BEAM (Virtual Machine)
   :PROPERTIES:
   :SLIDE:    segue dark quote
@@ -457,7 +473,7 @@ El proposito general de BEAM es ser un lugar solido donde ejecutar codigo.
 
 - Telemetry (DEMO)
 
-- Livew View (DEMO)
+- Livew View
 
 * Comunidad
 #+BEGIN_CENTER
