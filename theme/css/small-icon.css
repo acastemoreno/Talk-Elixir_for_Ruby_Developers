@@ -1,7 +1,7 @@
 slides > slide:not(.nobackground):before {
 background: url(../../images/elixir.png) no-repeat 0 50%;
 font-size: 12pt;
-content: "#Codeable #MyElixirStatus";
+content: "#RubyPeru #MyElixirStatus";
 position: absolute;
 bottom: 20px;
 left: 60px;
