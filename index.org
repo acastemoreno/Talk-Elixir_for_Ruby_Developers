@@ -23,7 +23,7 @@
 #+LANGUAGE: es
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="theme/css/custom.css" />
 
-** Me
+* Me
 - Alumno de Codeable (2do cohort)
 - Aprendi a usar Elixir antes que Ruby.
   - Side-Projects y trabajos freelancer.
